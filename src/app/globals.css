@@ -14,7 +14,7 @@
 
 html {
   font-family: var(--font-family-sans);
-  color-scheme: dark;
+  color-scheme: light;
   background-color: hsl(var(--bg-primary));
   color: hsl(var(--text-primary));
   -webkit-font-smoothing: antialiased;
@@ -67,25 +67,24 @@ button {
 }
 
 /* ==============================================================================
-   Glassmorphic & Premium UI Utility Classes
+   Glassmorphic & Premium UI Utility Classes (Light Mode)
    ============================================================================== */
 
 .glass-panel {
-  background: hsl(var(--bg-surface) / 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: #ffffff;
   border: 1px solid hsl(var(--border-subtle));
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.07),
+    0 2px 4px -2px rgb(0 0 0 / 0.05);
 }
 
 .glass-card {
-  background: hsl(var(--bg-surface) / 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #ffffff;
   border: 1px solid hsl(var(--border-subtle));
   border-radius: var(--radius-md);
   padding: var(--space-6);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
   transition:
     transform var(--transition-base),
     border-color var(--transition-base),
@@ -95,17 +94,19 @@ button {
 .glass-card:hover {
   transform: translateY(-2px);
   border-color: hsl(var(--border-highlight));
-  box-shadow: var(--shadow-xl);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.08),
+    0 4px 6px -4px rgb(0 0 0 / 0.04);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #4f46e5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, hsl(var(--color-brand-accent)) 0%, #a855f7 100%);
+  background: linear-gradient(135deg, hsl(var(--color-brand-accent)) 0%, #3b82f6 100%);
 }
 
 .container {

@@ -5,18 +5,22 @@ export interface NavItem {
 }
 
 export const siteConfig = {
-  name: 'Next.js Production Template',
+  name: 'SCM Dashboard',
   description:
-    'Scalable, maintainable, and high-performance production-grade Next.js App Router template strictly adhering to architectural engineering rules.',
-  url: 'http://localhost:3000',
+    'Enterprise workforce inventory management, double-entry stock ledger, and equipment allocations.',
+  url: 'http://localhost:3005',
   ogImage: '/og.png',
   mainNav: [
-    { title: 'Home', href: '/' },
-    { title: 'Dashboard', href: '/dashboard' },
+    { title: 'Dashboard', href: '/scm/dashboard' },
+    { title: 'Inventory', href: '/scm/items' },
+    { title: 'Stock Ledger', href: '/scm/stock-ledger' },
+    { title: 'Sets & Kits', href: '/scm/sets' },
+    { title: 'Allocations', href: '/scm/allocations' },
+    { title: 'My Equipment', href: '/scm/my-equipment' },
     { title: 'Login', href: '/login' },
   ] as const satisfies readonly NavItem[],
   links: {
-    github: 'https://github.com/example/nextjs-production-template',
+    github: 'https://github.com/example/scm-dashboard',
     docs: '/docs',
   },
 } as const;

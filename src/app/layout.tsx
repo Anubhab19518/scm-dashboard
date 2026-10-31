@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { siteConfig } from '@/config/site';
-import { Header } from '@/components/shared/header';
-import { Footer } from '@/components/shared/footer';
+import { metropolis } from '@/styles/fonts';
 
 export const metadata: Metadata = {
   title: {
@@ -37,12 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        <main style={{ flex: 1 }}>{children}</main>
-        <Footer />
-      </body>
+    <html lang="en" className={metropolis.variable}>
+      <body className={metropolis.className}>{children}</body>
     </html>
   );
 }

@@ -5,10 +5,11 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
     <div
       style={{
         display: 'flex',
-        minHeight: '80vh',
+        minHeight: '100vh',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 'var(--space-8) var(--space-4)',
+        padding: '1.5rem',
+        backgroundColor: '#f8fafc',
       }}
     >
       <div style={{ width: '100%', maxWidth: '440px' }}>{children}</div>
